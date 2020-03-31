@@ -89,7 +89,13 @@ export default {
   },
   head () {
     return {
-      title: 'احصائيات وأعداد'
+      title: 'احصائيات وأعداد',
+      meta: [
+        { name: 'og:title', content: 'احصائيات واعداد الاصابات بفايروس كورونا في العالم - مباشر' },
+        { name: 'og:description', content: 'أعداد المصابين الكلي وأعداد المتعافين وأعداد الوفيات بالاضافة لاعداد المصابين وحالتهم سيئة في جميع أنحاء العالم' },
+        { name: 'og:image', content: 'https://i.picsum.photos/id/122/200/300.jpg' }
+
+      ]
     }
   }
 
