@@ -1,6 +1,7 @@
-export default function ({ $axios, app }, inject) {
+import axios from 'axios'
+export default function ({ app }, inject) {
   const api = 'https://covid-19-data.p.rapidapi.com/'
-  const https = $axios.create({
+  const https = axios.create({
     baseURL: `${api}`,
     headers: {
       'x-rapidapi-host': 'covid-19-data.p.rapidapi.com',
