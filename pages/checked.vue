@@ -125,7 +125,13 @@ export default {
   },
   head () {
     return {
-      title: 'افحص نفسك'
+      title: 'افحص نفسك',
+      meta: [
+        { name: 'og:title', content: 'اختبار كشف الاصابة بفايروس كورونا' },
+        { name: 'og:description', content: 'بروتوكل لتحديد حالات الاشتباه بفايروس كورونا من عدمه، إذ يعتمد على استخدام نظام النقاط' },
+        { name: 'og:image', content: '~/assets/imgs/check.jpg' }
+
+      ]
     }
   }
 
