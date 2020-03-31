@@ -14,6 +14,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
+      { rel: 'favicon', type: 'image/x-icon', href: 'icon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Rajdhani|Cairo|Charm|El+Messiri&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Material+Icons' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' }
