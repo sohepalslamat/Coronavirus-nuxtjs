@@ -122,6 +122,11 @@ export default {
       }
       this.result = 0
     }
+  },
+  head () {
+    return {
+      title: 'افحص نفسك'
+    }
   }
 
 }

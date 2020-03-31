@@ -6,7 +6,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
+    titleTemplate: '%s - ' + 'كورونا فايروس',
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -14,9 +14,9 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Rajdhani|Cairo|Charm|El+Messiri&display=swap' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Material+Icons' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Material+Icons' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' }
     ]
   },
   /*
@@ -27,11 +27,13 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/style/main.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/axios' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -39,7 +41,8 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/axios'
   ],
   /*
   ** Nuxt.js modules
@@ -68,9 +71,6 @@ export default {
     },
     icons: {
       iconfont: 'mdi'
-    },
-    defaultAssets: {
-      font: true
     },
     rtl: true
   },
