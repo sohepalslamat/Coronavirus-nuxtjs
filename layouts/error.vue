@@ -1,7 +1,6 @@
 <template>
   <v-app dark>
     <v-content>
-      <v-breadcrumbs :items="items" large />
       <v-row
         align="center"
         justify="center"

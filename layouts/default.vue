@@ -2,7 +2,6 @@
   <v-app id="app">
     <v-app-bar
       app
-      color="white"
       height="100"
     >
       <v-avatar
@@ -58,12 +57,12 @@ export default {
         {
           text: 'الرئيسية',
           disabled: false,
-          href: '/'
+          to: '/'
         },
         {
           text: 'افحص نفسك',
           disabled: false,
-          href: 'checked'
+          to: 'checked'
         }
       ],
       icons: [

@@ -9,6 +9,7 @@ export default {
     titleTemplate: '%s - ' + 'كورونا فايروس',
     title: process.env.npm_package_name || '',
     meta: [
+      { name: 'google-site-verification', content: 'AOJy1ivF_J1t_qA58HTMd0JFPG96tBWNznseHu_ovKg' },
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
@@ -82,6 +83,9 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+      config.node = {
+        fs: 'empty'
+      }
     }
   }
 }
