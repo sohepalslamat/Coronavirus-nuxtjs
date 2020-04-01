@@ -11,7 +11,10 @@
       xl="7"
     >
       <v-card flat class="text-center">
-        <h1>احصائيات كورنا في العالم مباشر </h1>
+        <h1>
+          <span class="white--text px-3 red darken-3">مباشر</span>
+          احصائيات كورنا في العالم
+        </h1>
       </v-card>
     </v-col>
     <v-col
@@ -32,8 +35,9 @@
           class="text-center"
         >
           <v-card-title
-            class="headers d-inline-block my-3"
+            class="headers d-block my-3"
             style="
+                  word-break: normal !important;
                   font-size: 25px;
                   letter-spacing: 1px;
                 "
@@ -54,8 +58,8 @@
     </v-col>
   </v-row>
 </template>
-
 <script>
+/* eslint-disable dot-notation */
 export default {
   async asyncData ({ app }) {
     const { data } = await app.$https.get('totals')
@@ -82,7 +86,6 @@ export default {
           title: 'عدد الوفيات',
           number: totals.deaths
         }
-
       ]
 
     }

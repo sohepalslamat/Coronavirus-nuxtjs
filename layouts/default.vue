@@ -28,13 +28,12 @@
     <v-footer
       class="mt-5 justify-center"
       color="#292929"
-      height="120"
     >
       <v-card-text class="text-center">
         <v-btn
           v-for="(item,i) in icons"
           :key="i"
-          class="mx-4 white--text"
+          class="mx-2 white--text"
           icon
           :href="item.url"
         >

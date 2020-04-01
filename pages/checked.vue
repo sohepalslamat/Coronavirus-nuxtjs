@@ -60,6 +60,10 @@
             {{ result | resultToStr }}
           </v-card-text>
           <v-card-actions>
+            <v-btn x-large color="blue darken-1" text @click="newChecked">
+              <span>تم</span>
+            </v-btn>
+            <v-spacer />
             <v-btn x-large color="green darken-1" text @click="newChecked">
               <span>فحص جديد</span>
             </v-btn>
@@ -74,7 +78,7 @@
 export default {
   filters: {
     resultToStr (val) {
-      if (val <= 4) { return 'التزم بالبيت (عزل ذاتي)' } else if (val === 5) { return 'استشر طبيب هاتفياً' } else if (val >= 6) { return 'راجع المشفى لطلب الاستشارة' }
+      if (val <= 4) { return 'التزم بالبيت (عزل ذاتي) تجنباً لاصابتك بالعدوى  ' } else if (val === 5) { return 'استشر طبيب هاتفياً واشرح له عنما تعاني منه, واستمع لارشادات الطبيب.' } else if (val >= 6) { return 'راجع المشفى لطلب الاستشارة من أجل اجراء الفحص السريري مع الانتباه لعدم مخالطة من حولك' }
     }
 
   },
@@ -86,9 +90,9 @@ export default {
       newCheck: false,
       data: [
         { label: 'ارتفاع درجة الحرارة أكثر من 38', status: false, points: 2, color: 'indigo' },
-        { label: 'سعال شديد متزايد', status: false, points: 2, color: 'indigo' },
+        { label: 'سعال شديد وجاف', status: false, points: 2, color: 'indigo' },
         { label: 'احتقان شديد بالحلق', status: false, points: 1, color: 'primary' },
-        { label: 'مرض مزمن: سكري أو ضغط أو أمراض قلبيةأو كلوية ..ألخ', status: false, points: 1, color: 'primary' },
+        { label: 'مرض مزمن: سكري أو ضغط أو أمراض قلبية أو كلوية ..ألخ', status: false, points: 1, color: 'primary' },
         { label: 'سفر خارج البلد أو احتكاك مع شخص قادم من خارج البلد', status: false, points: 5, color: 'red' },
         { label: 'مخالطة لحالة التهاب تنفسي حاد', status: false, points: 4, color: 'error' },
         { label: 'زيارة مكان صحي ثبت فيه وجود حالة مصابة بالكورونا', status: false, points: 3, color: 'warning' },
