@@ -6,7 +6,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s - ' + 'كورونا فايروس',
+    titleTemplate: '%s | ' + 'أخبار فيروس كورونا',
     title: process.env.npm_package_name || '',
     meta: [
       { name: 'google-site-verification', content: 'AOJy1ivF_J1t_qA58HTMd0JFPG96tBWNznseHu_ovKg' },
