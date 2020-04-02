@@ -17,7 +17,7 @@
       </v-avatar>
 
       <v-toolbar-title class="font-weight-black headers">
-        أخبار فيروس كورونا
+        أخبار فيروس كورونا<span class="pink--text"> (COVID-19)</span>
       </v-toolbar-title>
     </v-app-bar>
     <v-content>

@@ -39,7 +39,6 @@
             style="
                   word-break: normal !important;
                   font-size: 25px;
-                  letter-spacing: 1px;
                 "
             v-text="item.title"
           />
@@ -51,8 +50,9 @@
                   line-height: 1.375rem;
                   letter-spacing: 2px;
                 "
-            v-text="item.number"
-          />
+          >
+            {{ Number(item.number).toLocaleString() }}
+          </v-card-subtitle>
         </div>
       </v-card>
     </v-col>

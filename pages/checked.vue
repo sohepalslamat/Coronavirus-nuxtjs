@@ -131,7 +131,7 @@ export default {
     return {
       title: ' تأكد من عدم اصابتك من فيروس كورونا | افحص نفسك',
       meta: [
-        { name: 'og:title', content: 'اختبار كشف الاصابة بفايروس كورونا' },
+        { name: 'og:title', content: 'تأكد من عدم اصابتك من فيروس كورونا - افحص نفسك' },
         { name: 'og:description', content: 'بروتوكل لتحديد حالات الاشتباه بفايروس كورونا من عدمه، إذ يعتمد على استخدام نظام النقاط' },
         { name: 'og:image', content: 'https://i.ibb.co/QKVHMv4/check.jpg' }
 
