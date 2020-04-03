@@ -52,7 +52,7 @@
                   letter-spacing: 2px;
                 "
           >
-            {{ Number(item.number).toLocaleString() }}
+            {{ item.number }}
           </v-card-subtitle>
         </div>
       </v-card>
@@ -79,6 +79,7 @@
           />
         </v-card-title>
         <v-data-table
+          :items-per-page="-1"
           :headers="headers"
           :items="countries"
           :search="search"
@@ -94,30 +95,30 @@ import { mapGetters } from 'vuex'
 /* eslint-disable dot-notation */
 export default {
   async asyncData ({ app, store }) {
-    const { data } = await app.$https.get('totals')
-    const totals = data[0]
+    const { data } = await app.$api_mo.get('worldstat.php')
+    const totals = data
     await store.dispatch('add_affected_countries', app)
     return {
       items: [
         {
           color: '#1F7087',
           title: 'اجمالي الاصابات',
-          number: totals.confirmed
+          number: totals.total_cases
         },
         {
           color: '#DC143C',
           title: 'اجمالي الوفيات',
-          number: totals.deaths
+          number: totals.total_deaths
         },
         {
           color: '#385F73',
           title: 'حالات التعافي',
-          number: totals.recovered
+          number: totals.total_recovered
         },
         {
           color: '#952175',
-          title: 'حالات حرجة جداً',
-          number: totals.critical
+          title: 'الوفيات الحديثة',
+          number: totals.new_deaths
         }
       ]
 
@@ -163,6 +164,10 @@ export default {
 #table{
   max-width: 100%;
   margin: 0px auto;
+  table{
+  width: 90% !important;
+  margin: 0px auto;
+  }
   .v-data-footer{
     padding: 0px;
     padding-left: 4px;
@@ -178,8 +183,6 @@ export default {
   }
 }
 table{
-  max-width: 90%;
-  margin: 0px auto;
   th {
     background-color: rgb(99, 112, 228) !important;
     color: rgb(248, 245, 245) !important;
