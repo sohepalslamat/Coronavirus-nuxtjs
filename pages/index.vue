@@ -2,13 +2,14 @@
   <v-row
     align="center"
     justify="center"
+    class="mx-0"
   >
     <v-col
-      cols="11"
+      cols="12"
       sm="10"
-      md="7"
-      lg="7"
-      xl="7"
+      md="10"
+      lg="10"
+      xl="10"
     >
       <v-card flat class="text-center">
         <h1>
@@ -20,11 +21,11 @@
     <v-col
       v-for="(item, i) in items"
       :key="i"
-      cols="11"
-      sm="10"
-      md="7"
-      lg="7"
-      xl="7"
+      xs="6"
+      sm="6"
+      md="4"
+      lg="5"
+      xl="5"
     >
       <v-card
         class="elevation-12"
@@ -56,39 +57,92 @@
         </div>
       </v-card>
     </v-col>
+    <v-col
+      cols="12"
+      sm="10"
+      md="10"
+      lg="10"
+      xl="10"
+      class="px-0"
+    >
+      <v-card
+        id="table"
+      >
+        <v-card-title>
+          <v-spacer />
+          <v-text-field
+            v-model="search"
+            append-icon="mdi-magnify"
+            label="بحث "
+            single-line
+            hide-details
+          />
+        </v-card-title>
+        <v-data-table
+          :headers="headers"
+          :items="countries"
+          :search="search"
+          :mobile-breakpoint="NaN"
+          :dense="$vuetify.breakpoint.name == 'sm' || $vuetify.breakpoint.name == 'xs'"
+        />
+      </v-card>
+    </v-col>
   </v-row>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 /* eslint-disable dot-notation */
 export default {
-  async asyncData ({ app }) {
+  async asyncData ({ app, store }) {
     const { data } = await app.$https.get('totals')
     const totals = data[0]
+    await store.dispatch('add_affected_countries', app)
     return {
       items: [
         {
           color: '#1F7087',
-          title: 'عدد الاصابات الكلي',
+          title: 'اجمالي الاصابات',
           number: totals.confirmed
         },
         {
-          color: '#952175',
-          title: 'عدد المصابين حالتهم حرجة',
-          number: totals.critical
+          color: '#DC143C',
+          title: 'اجمالي الوفيات',
+          number: totals.deaths
         },
         {
           color: '#385F73',
-          title: 'عدد الحالات التي تماثلت للشفاء',
+          title: 'حالات التعافي',
           number: totals.recovered
         },
         {
-          color: '#DC143C',
-          title: 'عدد الوفيات',
-          number: totals.deaths
+          color: '#952175',
+          title: 'حالات حرجة جداً',
+          number: totals.critical
         }
       ]
 
     }
+  },
+  data () {
+    return {
+      search: '',
+      headers: [
+        {
+          text: 'البلد',
+          align: 'center',
+          sortable: false,
+          value: 'country_name'
+        },
+        { text: 'اجمالي الاصابات', value: 'cases' },
+        { text: 'الوفيات', value: 'deaths' },
+        { text: 'حالات التعافي', value: 'total_recovered' }
+        // { text: 'الاصابات الخطرة', value: 'serious_critical' }
+      ]
+    }
+  },
+  computed: {
+    ...mapGetters(['countries'])
+
   },
   head () {
     return {
@@ -105,6 +159,53 @@ export default {
 }
 </script>
 
-<style>
+<style lang='scss'>
+#table{
+  max-width: 100%;
+  margin: 0px auto;
+  .v-data-footer{
+    padding: 0px;
+    padding-left: 4px;
+    margin: 0px auto;
+    margin-left: 10px;
+    .v-data-footer__pagination{
+      margin-left: 5px;
+    }
+    button{
+      margin: 0px;
+      width: 25px;
+    }
+  }
+}
+table{
+  max-width: 90%;
+  margin: 0px auto;
+  th {
+    background-color: rgb(99, 112, 228) !important;
+    color: rgb(248, 245, 245) !important;
+    font-weight: 400 !important;
+    font-size: 17px !important;
+    text-align: center !important;
+  }
 
+  td{
+    font-size: 16px !important ;
+    text-align: center !important;
+  }
+
+  tr:nth-child(odd){
+    background-color: #F2F2F2;
+  }
+  tr {
+    td:nth-child(1){
+      color: orangered;
+    }
+    td:nth-child(4){
+      color: green;
+    }
+    td:nth-child(3){
+      color: red;
+    }
+  }
+}
 </style>

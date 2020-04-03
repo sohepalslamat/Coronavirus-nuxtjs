@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import ar from 'vuetify/es5/locale/ar'
 
 export default {
   mode: 'universal',
@@ -6,7 +7,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s | ' + 'أخبار فيروس كورونا',
+    titleTemplate: '%s | ' + 'أخبار فيروس كورونا (COVID-19)',
     title: process.env.npm_package_name || '',
     meta: [
       { name: 'google-site-verification', content: 'AOJy1ivF_J1t_qA58HTMd0JFPG96tBWNznseHu_ovKg' },
@@ -57,6 +58,10 @@ export default {
   */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    lang: {
+      locales: { ar },
+      current: 'ar'
+    },
     theme: {
       dark: false,
       themes: {

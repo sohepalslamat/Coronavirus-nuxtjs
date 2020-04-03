@@ -1,5 +1,6 @@
 export const state = () => ({
-  views: new Map()
+  views: new Map(),
+  countries: []
 })
 
 export const getters = {
@@ -10,6 +11,9 @@ export const getters = {
       }
       return 0
     }
+  },
+  countries (state) {
+    return state.countries
   }
 }
 
@@ -21,6 +25,16 @@ export const mutations = {
         state.views.set(path, ++count)
       } else { state.views.set(path, 1) }
     }
+  },
+  add_affected_countries (state, val) {
+    state.countries = val
+  }
+
+}
+export const actions = {
+  async add_affected_countries ({ commit }, app) {
+    const { data } = await app.$api_mo.get('cases_by_country.php')
+    commit('add_affected_countries', data.countries_stat)
   }
 
 }
