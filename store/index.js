@@ -1,3 +1,4 @@
+import { countries } from '~/countries'
 export const state = () => ({
   views: new Map(),
   countries: []
@@ -34,7 +35,26 @@ export const mutations = {
 export const actions = {
   async add_affected_countries ({ commit }, app) {
     const { data } = await app.$api_mo.get('cases_by_country.php')
-    commit('add_affected_countries', data.countries_stat)
+    // eslint-disable-next-line no-var
+    var result = data.countries_stat
+    for (const i of result) {
+      // eslint-disable-next-line dot-notation
+      i['country_name_ar'] = countries[String(i.country_name)]
+    }
+    commit('add_affected_countries', result)
   }
-
+  /*
+  async transition ({ state }, app) {
+    let x = ''
+    for (const i of state.countries) {
+      x = x + `text=${String(i.country_name)};`
+    }
+    const { data } = await app.$api_tr.post('', x)
+    const y = {}
+    for (const i in data.text) {
+      y[String(state.countries[i].country_name)] = data.text[i]
+    // console.log(arabicCountries[String(i.country_name)])
+    // }
+    }
+  } */
 }

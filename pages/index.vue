@@ -132,7 +132,7 @@ export default {
           text: 'البلد',
           align: 'center',
           sortable: false,
-          value: 'country_name'
+          value: 'country_name_ar'
         },
         { text: 'اجمالي الاصابات', value: 'cases' },
         { text: 'الوفيات', value: 'deaths' },
