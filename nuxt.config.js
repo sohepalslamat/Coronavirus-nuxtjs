@@ -69,6 +69,9 @@ export default {
       background_color: '#3367D6',
       display: 'standalone',
       theme_color: '#3367D6'
+    },
+    meta: {
+      'apple-mobile-web-app-capable': true
     }
   },
   /*
