@@ -109,7 +109,7 @@ export const countries =
   'Sri Lanka': 'سري لانكا',
   Georgia: 'جورجيا',
   Venezuela: 'فنزويلا',
-  DRC: 'جمهورية الكونغو الديمقراطية',
+  DRC: 'الكونغو',
   Martinique: 'مارتينيك',
   Niger: 'النيجر',
   Kyrgyzstan: 'قيرغيزستان',
