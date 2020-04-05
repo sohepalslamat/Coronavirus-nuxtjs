@@ -53,6 +53,24 @@ export default {
   modules: [
     '@nuxtjs/pwa'
   ],
+  pwa: {
+    manifest: {
+      short_name: 'COVID-19',
+      name: 'أخبار فيروس كورونا (COVID-19)',
+      description: 'أخر أخبار واحصاءات فيروس كورونا حول العالم',
+      lang: 'ar',
+      icons: [
+        {
+          src: 'icon.png',
+          type: 'image/png'
+        }
+      ],
+      start_url: '/',
+      background_color: '#3367D6',
+      display: 'standalone',
+      theme_color: '#3367D6'
+    }
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
