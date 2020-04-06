@@ -149,12 +149,12 @@ export default {
     return {
       title: 'احصائيات واعداد الاصابات بفيروس كورونا في العالم | مباشر',
       meta: [
-        { name: 'og:title', content: 'احصائيات واعداد الاصابات بفيروس كورونا في العالم - مباشر' },
-        { name: 'og:description', content: 'أعداد المصابين الكلي وأعداد المتعافين وأعداد الوفيات بالاضافة لاعداد المصابين وحالتهم سيئة في جميع أنحاء العالم' },
-        { name: 'og:image', content: 'https://i.ibb.co/60f6Z4B/coronavirus-4914028-1920.jpg' },
-        { name: 'twitter:title', content: 'احصائيات واعداد الاصابات بفيروس كورونا في العالم - مباشر' },
-        { name: 'twitter:description', content: 'أعداد المصابين الكلي وأعداد المتعافين وأعداد الوفيات بالاضافة لاعداد المصابين وحالتهم سيئة في جميع أنحاء العالم' },
-        { name: 'twitter:image', content: 'https://i.ibb.co/60f6Z4B/coronavirus-4914028-1920.jpg' }
+        { hid: 'og:title', name: 'og:title', content: 'احصائيات واعداد الاصابات بفيروس كورونا في العالم - مباشر' },
+        { hid: 'og:description', name: 'og:description', content: 'أعداد المصابين الكلي وأعداد المتعافين وأعداد الوفيات بالاضافة لاعداد المصابين وحالتهم سيئة في جميع أنحاء العالم' },
+        { hid: 'og:image', name: 'og:image', content: 'https://i.ibb.co/60f6Z4B/coronavirus-4914028-1920.jpg' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'احصائيات واعداد الاصابات بفيروس كورونا في العالم - مباشر' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'أعداد المصابين الكلي وأعداد المتعافين وأعداد الوفيات بالاضافة لاعداد المصابين وحالتهم سيئة في جميع أنحاء العالم' },
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://i.ibb.co/60f6Z4B/coronavirus-4914028-1920.jpg' }
 
       ]
     }

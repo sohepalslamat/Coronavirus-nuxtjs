@@ -131,12 +131,12 @@ export default {
     return {
       title: ' تأكد من عدم اصابتك من فيروس كورونا | افحص نفسك',
       meta: [
-        { name: 'og:title', content: 'تأكد من عدم اصابتك من فيروس كورونا - افحص نفسك' },
-        { name: 'og:description', content: 'بروتوكل لتحديد حالات الاشتباه بفايروس كورونا من عدمه، إذ يعتمد على استخدام نظام النقاط' },
-        { name: 'og:image', content: 'https://i.ibb.co/QKVHMv4/check.jpg' },
-        { name: 'twitter:title', content: 'تأكد من عدم اصابتك من فيروس كورونا - افحص نفسك' },
-        { name: 'twitter:description', content: 'بروتوكل لتحديد حالات الاشتباه بفايروس كورونا من عدمه، إذ يعتمد على استخدام نظام النقاط' },
-        { name: 'twitter:image', content: 'https://i.ibb.co/QKVHMv4/check.jpg' }
+        { hid: 'og:title', name: 'og:title', content: 'تأكد من عدم اصابتك من فيروس كورونا - افحص نفسك' },
+        { hid: 'og:description', name: 'og:description', content: 'بروتوكل لتحديد حالات الاشتباه بفايروس كورونا من عدمه، إذ يعتمد على استخدام نظام النقاط' },
+        { hid: 'og:image', name: 'og:image', content: 'https://i.ibb.co/QKVHMv4/check.jpg' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'تأكد من عدم اصابتك من فيروس كورونا - افحص نفسك' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'بروتوكل لتحديد حالات الاشتباه بفايروس كورونا من عدمه، إذ يعتمد على استخدام نظام النقاط' },
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://i.ibb.co/QKVHMv4/check.jpg' }
 
       ]
     }
