@@ -39,7 +39,9 @@ export const actions = {
     var result = data.countries_stat
     for (const i of result) {
       // eslint-disable-next-line dot-notation
-      i['country_name_ar'] = countries[String(i.country_name)]
+      if (countries[String(i.country_name)] == undefined || countries[String(i.country_name)] == '') {
+        i.country_name_ar = i.country_name
+      } else { i.country_name_ar = countries[String(i.country_name)] }
     }
     commit('add_affected_countries', result)
   }

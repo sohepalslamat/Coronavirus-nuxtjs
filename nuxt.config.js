@@ -16,8 +16,8 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'favicon', type: 'image/x-icon', href: 'icon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Rajdhani|Cairo|Charm|El+Messiri&display=swap' },
+      { rel: 'favicon', type: 'image/x-icon', href: 'favicon.ico' },
+      { rel: 'stylesheet dns-prefetch', href: 'https://fonts.googleapis.com/css?family=Rajdhani|El+Messiri&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Material+Icons' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' }
     ]
@@ -25,7 +25,16 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#ee083a' },
+  render: {
+    http2: {
+      push: true,
+      pushAssets: (req, res, publicPath, preloadFiles) => preloadFiles
+        .filter(f => f.asType === 'script' && f.file === 'runtime.js')
+        .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+
+    }
+  },
   /*
   ** Global CSS
   */

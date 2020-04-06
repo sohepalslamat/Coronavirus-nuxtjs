@@ -17,7 +17,7 @@ export const countries =
   Portugal: 'البرتغال',
   Brazil: 'البرازيل',
   'S. Korea': 'كوريا الجنوبية',
-  Israel: 'الاحتلال الإسرائيلي',
+  Israel: 'إسرائيل',
   Sweden: 'السويد',
   Norway: 'النرويج',
   Australia: 'أستراليا',
@@ -46,7 +46,7 @@ export const countries =
   Serbia: 'صربيا',
   'South Africa': 'جنوب أفريقيا',
   UAE: 'الإمارات',
-  'Dominican Republic': 'جمهورية الدومينيكان',
+  'Dominican Republic': 'الدومينيكان',
   Iceland: 'أيسلندا',
   Colombia: 'كولومبيا',
   Argentina: 'الأرجنتين',
@@ -68,7 +68,7 @@ export const countries =
   'Diamond Princess': 'الماس الأميرة',
   Bahrain: 'البحرين',
   Hungary: 'المجر',
-  'Bosnia and Herzegovina': 'البوسنة والهرسك',
+  'Bosnia and Herzegovina': 'البوسنة',
   Cameroon: 'الكاميرون',
   Tunisia: 'تونس',
   Kazakhstan: 'كازاخستان',
@@ -207,5 +207,7 @@ export const countries =
   'Falkland Islands': 'جزر فوكلاند',
   'Papua New Guinea': 'بابوا غينيا الجديدة',
   'Timor-Leste': 'تيمور-ليشتي',
-  China: 'الصين'
+  China: 'الصين',
+  'South Sudan': 'جنوب السودان',
+  'Western Sahara': 'الصحراء الغربية'
 }

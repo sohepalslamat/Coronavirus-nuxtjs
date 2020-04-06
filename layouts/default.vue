@@ -21,7 +21,7 @@
       </v-toolbar-title>
     </v-app-bar>
     <v-content>
-      <v-breadcrumbs :items="items" large />
+      <v-breadcrumbs :items="items" router large />
       <Nuxt />
     </v-content>
     <v-footer
@@ -34,6 +34,7 @@
           :key="i"
           class="mx-2 white--text"
           icon
+          :aria-label="item.label"
           :href="item.url"
         >
           <v-icon size="24px">
@@ -67,19 +68,19 @@ export default {
       ],
       icons: [
         {
-          icon: 'fab fa-facebook', url: 'https://www.facebook.com/sohep.alslamat91'
+          icon: 'fab fa-facebook', url: 'https://www.facebook.com/sohep.alslamat91', label: 'facebook'
         },
         {
-          icon: 'fab fa-twitter', url: 'https://twitter.com/SohepAlslamat'
+          icon: 'fab fa-twitter', url: 'https://twitter.com/SohepAlslamat', label: 'twitter'
         },
         {
-          icon: 'fab fa-github', url: 'https://github.com/sohepalslamat'
+          icon: 'fab fa-github', url: 'https://github.com/sohepalslamat', label: 'github'
         },
         {
-          icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/in/sohep-alslamat-12022658'
+          icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/in/sohep-alslamat-12022658', label: 'linkedin'
         },
         {
-          icon: 'fab fa-youtube', url: 'https://www.youtube.com/channel/UCzfT1tSJXPkrtllnTSUIvZQ'
+          icon: 'fab fa-youtube', url: 'https://www.youtube.com/channel/UCzfT1tSJXPkrtllnTSUIvZQ', label: 'youtube'
         }
       ]
 

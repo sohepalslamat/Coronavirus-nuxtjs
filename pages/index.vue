@@ -106,18 +106,18 @@ export default {
           number: totals.total_cases
         },
         {
-          color: '#DC143C',
+          color: '#3a282c',
           title: 'اجمالي الوفيات',
           number: totals.total_deaths
         },
         {
-          color: '#385F73',
+          color: '#328210',
           title: 'حالات التعافي',
           number: totals.total_recovered
         },
         {
-          color: '#952175',
-          title: 'الوفيات الحديثة',
+          color: '#823167',
+          title: 'الوفيات اليوم',
           number: totals.new_deaths
         }
       ]
@@ -184,7 +184,7 @@ export default {
 }
 table{
   th {
-    background-color: rgb(99, 112, 228) !important;
+    background-color: rgb(24, 58, 38) !important;
     color: rgb(248, 245, 245) !important;
     font-weight: 400 !important;
     font-size: 17px !important;
@@ -200,14 +200,17 @@ table{
     background-color: #F2F2F2;
   }
   tr {
+    td{
+      font-weight: bolder;
+    }
     td:nth-child(1){
-      color: orangered;
+      color: rgb(51, 19, 8);
     }
     td:nth-child(4){
       color: green;
     }
     td:nth-child(3){
-      color: red;
+      color: rgb(126, 4, 4);
     }
   }
 }
