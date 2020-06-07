@@ -15,6 +15,9 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
+    script: [
+      { 'data-ad-client': 'ca-pub-2446438844216589', async: true, src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' }
+    ],
     link: [
       { rel: 'favicon', type: 'image/x-icon', href: 'favicon.ico' },
       { rel: 'stylesheet dns-prefetch', href: 'https://fonts.googleapis.com/css?family=Rajdhani|El+Messiri&display=swap' },
