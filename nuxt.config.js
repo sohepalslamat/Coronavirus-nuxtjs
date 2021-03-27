@@ -37,9 +37,6 @@ export default {
 
     }
   },
-  build: {
-    publicPath: 'https://d2xt6y7tmixoke.cloudfront.net'
-  },
   /*
   ** Global CSS
   */
@@ -124,6 +121,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    publicPath: 'https://d2xt6y7tmixoke.cloudfront.net',
     extend (config, ctx) {
       config.node = {
         fs: 'empty'
