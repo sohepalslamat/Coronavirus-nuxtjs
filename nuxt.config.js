@@ -2,7 +2,6 @@ import colors from 'vuetify/es5/util/colors'
 import ar from 'vuetify/es5/locale/ar'
 
 export default {
-  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -37,6 +36,9 @@ export default {
         .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
 
     }
+  },
+  build: {
+    publicPath: 'https://d2xt6y7tmixoke.cloudfront.net'
   },
   /*
   ** Global CSS
