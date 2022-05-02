@@ -24,13 +24,12 @@ export default {
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  target: 'static',
   router: {
     base: '/Coronavirus-nuxtjs/'
   },
+  /*
+  ** Customize the progress-bar color
+  */
   loading: { color: '#ee083a' },
   render: {
     http2: {
