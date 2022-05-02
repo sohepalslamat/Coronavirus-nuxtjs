@@ -2,7 +2,8 @@
   "name": "Coronavirus-Check",
   "version": "1.0.0",
   "description": "My breathtaking Nuxt.js project",
-  "author": "sohep alslamat",
+  "homepage": "https://sohepalslamat.github.io/Coronavirus-nuxtjs",
+  "author": "sohiab alslamat",
   "private": true,
   "scripts": {
     "dev": "nuxt",
