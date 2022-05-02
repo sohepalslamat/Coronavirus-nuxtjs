@@ -27,6 +27,10 @@ export default {
   /*
   ** Customize the progress-bar color
   */
+  target: 'static',
+  router: {
+    base: '/Coronavirus-nuxtjs/'
+  },
   loading: { color: '#ee083a' },
   render: {
     http2: {
