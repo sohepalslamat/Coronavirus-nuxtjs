@@ -25,9 +25,9 @@ export default {
     ]
   },
 
-  // router: {
-  //   base: '/Coronavirus-nuxtjs/'
-  // },
+  router: {
+    base: '/Coronavirus-nuxtjs/'
+  },
   /*
   ** Customize the progress-bar color
   */
