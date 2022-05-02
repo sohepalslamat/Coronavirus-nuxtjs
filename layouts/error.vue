@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-content>
+    <v-main>
       <v-row
         align="center"
         justify="center"
@@ -24,7 +24,7 @@
           </NuxtLink>
         </v-col>
       </v-row>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 

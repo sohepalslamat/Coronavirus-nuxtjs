@@ -83,8 +83,8 @@
           :headers="headers"
           :items="countries"
           :search="search"
-          :mobile-breakpoint="NaN"
-          :dense="$vuetify.breakpoint.name == 'sm' || $vuetify.breakpoint.name == 'xs'"
+          :mobile-breakpoint="''"
+          :dense="$vuetify.breakpoint.mobile"
         />
       </v-card>
     </v-col>

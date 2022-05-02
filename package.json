@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "My breathtaking Nuxt.js project",
   "author": "sohep alslamat",
-  "engines": {
-    "node": "12.15.x",
-    "npm": "4.6.x"
-  },
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -18,15 +14,15 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^2.0.0",
-    "@nuxtjs/eslint-module": "^1.0.0",
-    "@nuxtjs/pwa": "3.0.0-beta.20",
-    "@nuxtjs/vuetify": "^1.0.0",
+    "@nuxtjs/eslint-config": "^2.0.2",
+    "@nuxtjs/eslint-module": "^1.2.0",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/vuetify": "^1.12.3",
     "babel-eslint": "^10.0.1",
-    "eslint": "^6.1.0",
+    "eslint": "^6.8.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "push-dir": "^0.4.1"
   }

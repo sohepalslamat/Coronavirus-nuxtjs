@@ -24,22 +24,23 @@ export default {
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' }
     ]
   },
-  router: {
-    base: '/Coronavirus-nuxtjs/'
-  },
+
+  // router: {
+  //   base: '/Coronavirus-nuxtjs/'
+  // },
   /*
   ** Customize the progress-bar color
   */
   loading: { color: '#ee083a' },
-  render: {
-    http2: {
-      push: true,
-      pushAssets: (req, res, publicPath, preloadFiles) => preloadFiles
-        .filter(f => f.asType === 'script' && f.file === 'runtime.js')
-        .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+  // render: {
+  //   http2: {
+  //     push: true,
+  //     pushAssets: (req, res, publicPath, preloadFiles) => preloadFiles
+  //       .filter(f => f.asType === 'script' && f.file === 'runtime.js')
+  //       .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
 
-    }
-  },
+  //   }
+  // },
   /*
   ** Global CSS
   */
@@ -124,7 +125,6 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    publicPath: 'https://d2y35i9viqqdgq.cloudfront.net',
     extend (config, ctx) {
       config.node = {
         fs: 'empty'
