@@ -34,9 +34,14 @@ export const mutations = {
 }
 export const actions = {
   async add_affected_countries ({ commit }, app) {
-    const { data } = await app.$api_mo.get('cases_by_country.php')
-    // eslint-disable-next-line no-var
-    var result = data.countries_stat
+    let result = require('../api/last_data').default.countries_stat
+    try {
+      const { data } = await app.$api.get('api')
+      result = data.countries_stat
+    } catch {
+      result = require('../api/last_data').default.countries_stat
+    }
+
     for (const i of result) {
       // eslint-disable-next-line dot-notation
       if (countries[String(i.country_name)] == undefined || countries[String(i.country_name)] == '') {

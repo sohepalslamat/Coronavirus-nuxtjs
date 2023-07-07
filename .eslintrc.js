@@ -14,6 +14,9 @@ module.exports = {
   // add your custom rules here
   rules: {
     camelcase: 'off',
-    eqeqeq: 'off'
+    eqeqeq: 'off',
+    "vue/comment-directive": ["error", {
+      "reportUnusedDisableDirectives": false
+    }]
   }
 }

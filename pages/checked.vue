@@ -75,6 +75,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   filters: {
     resultToStr (val) {

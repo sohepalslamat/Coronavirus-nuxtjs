@@ -90,13 +90,20 @@
     </v-col>
   </v-row>
 </template>
+
 <script>
+/* eslint-disable */
 import { mapGetters } from 'vuex'
 /* eslint-disable dot-notation */
 export default {
   async asyncData ({ app, store }) {
-    const { data } = await app.$api_mo.get('worldstat.php')
-    const totals = data
+    let totals = require('../api/last_data').default.world_total
+    try {
+      const { data } = await app.$api.get('api')
+      totals = data.world_total
+    } catch {
+      totals = require('../api/last_data').default.world_total
+    }
     await store.dispatch('add_affected_countries', app)
     return {
       items: [

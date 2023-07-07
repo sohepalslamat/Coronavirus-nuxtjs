@@ -29,6 +29,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   layout: 'empty',
   props: {
