@@ -50,7 +50,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "/",
+  "start_url": "/Coronavirus-nuxtjs",
   "display": "standalone",
   "background_color": "#3367D6",
   "theme_color": "#3367D6",
